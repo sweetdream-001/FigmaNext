@@ -22,34 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="bg-blue-600 text-white py-4">
-          <nav className="container mx-auto px-4 flex justify-between">
-            <div className="text-xl font-bold">My Next App</div>
-            <ul className="flex space-x-4">
-              {/* These go to our page.js and /about/page.js, etc. */}
-              <li>
-                <a href="/" className="hover:underline">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="hover:underline">
-                  About
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-        {/* Main Content: whatever each route/page renders */}
-        <main className="flex-grow container mx-auto px-4 py-8">{children}</main>
-
-        {/* Footer */}
-        <footer className="bg-gray-200 py-4">
-          <div className="container mx-auto px-4 text-center">
-            <p>&copy; {new Date().getFullYear()} My NextJS App</p>
-          </div>
-        </footer>
+        <main>{children}</main>
       </body>
     </html>
   );
